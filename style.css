@@ -38,9 +38,14 @@ img{
 /* header */
 .header{
     height:80px;
+    background-color: var(--color-background-black);
     display:flex;
     justify-content:center;
     align-items:center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .header-logo-wrapper{
@@ -72,6 +77,8 @@ img{
     align-items: center;
     padding: 94px 40px;
     position: relative;
+    margin-top: 80px;
+
 }
 .hero::after{
     content:"";
@@ -114,10 +121,14 @@ img{
 }
 @media(max-width:750px){
     .hero{
+        margin-top: 60px;
         padding: 40px 20px;
     }
     .hero-container{
         justify-content:flex-start;
+    }
+    .hero-texts{
+        gap: 20px;
     }
     
 }
