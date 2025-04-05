@@ -351,3 +351,98 @@ img {
   font-weight: 400;
   line-height: normal;
 }
+.signup {
+  display: flex;
+  padding: 80px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  align-self: stretch;
+  background: var(--color-accent-yellow);
+}
+.flame18 {
+  display: flex;
+  padding: 80px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  align-self: stretch;
+}
+.SectionTitle {
+  flex: 1 0 0;
+  color: var(--black, #020911);
+  font-family: Anton;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+}
+.text2 {
+  color: var(--black, #020911);
+  font-family: "Noto Sans JP";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.discription {
+  display: flex;
+  width: 800px;
+  align-items: flex-start;
+}
+.Forms {
+  display: flex;
+  width: 800px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.TextInput {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.Frame2 {
+  display: flex;
+  width: 250px;
+  align-items: flex-start;
+  gap: 10px;
+}
+.Frame3 {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid var(--form-border-red, #df6da2);
+  background: var(--form-background-yellow, #fffab9);
+  color: var(--form-placeholder-gray, #ad9783);
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.button {
+  display: flex;
+  width: 800px;
+  height: 60px;
+  padding: 10px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent-red, #f20574);
+  box-shadow: 4px 4px 0px 0px #020911;
+  color: var(--white, #fffefc);
+  font-family: "Noto Sans JP";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.fillo1 {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
