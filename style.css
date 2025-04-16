@@ -140,25 +140,7 @@ img {
   left: 0;
   width: 100%;
 }
-.aboutitle {
-  color: var(--color-white);
 
-  font-family: var(--font-family-heading);
-  font-size: 32px;
-  letter-spacing: 0.64px;
-  margin: 0;
-}
-.Grand {
-  color: var(--color-accent-red);
-}
-.Players {
-  color: var(--color-accent-yellow);
-}
-@media (max-width: 750px) {
-  .aboutitle {
-    font-size: 24px;
-  }
-}
 .img-wrap-writings {
   display: flex;
   width: 800px;
@@ -170,15 +152,6 @@ img {
   width: 320px;
   height: 180px;
   flex-shrink: 0;
-}
-
-@media (max-width: 750px) {
-  .live {
-    display: none;
-  }
-  .img-wrap-writings {
-    width: 100%;
-  }
 }
 .explaination {
   color: var(--white, #fffefc);
@@ -198,13 +171,6 @@ img {
   align-self: stretch;
   background-color: var(--color-background-black);
 }
-@media (max-width: 750px) {
-  .about {
-    padding: 40px 20px;
-
-    gap: 40px;
-  }
-}
 .frame16 {
   display: flex;
   padding: 0px 40px;
@@ -221,14 +187,16 @@ img {
   align-self: stretch;
   background: var(--color-background-navy);
 }
-
-.CourseTitle {
-  color: var(--color-white);
-  font-family: var(--font-family-heading);
+.SectionTitle {
+  color: var(--white, #fffefc);
+  font-family: Anton;
   font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
   margin: 0px;
 }
-
 .frame17 {
   display: flex;
   padding: 0px 40px;
@@ -238,12 +206,6 @@ img {
   margin: 0;
   border: 0;
 }
-@media (max-width: 750px) {
-  .frame17 {
-    padding: 0px 20px;
-  }
-}
-
 .cards {
   display: flex;
   width: 800px;
@@ -251,7 +213,6 @@ img {
   align-items: flex-start;
   gap: 20px;
 }
-
 .card {
   position: relative;
   display: flex;
@@ -265,14 +226,6 @@ img {
     transition: all ease 0.5s;
   }
 }
-@media (max-width: 750px) {
-  .card {
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-  }
-}
-
 .cardbody {
   display: flex;
   height: 150px;
@@ -378,7 +331,6 @@ img {
     transition: all ease 0.5s;
   }
 }
-
 .Frame22 {
   display: flex;
   justify-content: center;
@@ -395,163 +347,6 @@ img {
   color: var(--white, #fffefc);
   font-family: "Noto Sans JP";
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.signup {
-  display: flex;
-  padding: 80px 0px;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  align-self: stretch;
-  background: var(--color-accent-yellow);
-}
-.flame18 {
-  display: flex;
-  width: 800px;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.SectionTitle {
-  flex: 1 0 0;
-  color: var(--black, #020911);
-  font-family: Anton;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.64px;
-}
-.text2 {
-  color: var(--black, #020911);
-  font-family: "Noto Sans JP";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  display: flex;
-  align-items: flex-start;
-  align-self: stretch;
-}
-.discription {
-  display: flex;
-  width: 800px;
-  align-items: flex-start;
-}
-.Forms {
-  display: flex;
-  width: 800px;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.TextInput {
-  align-items: flex-start;
-  align-self: stretch;
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  padding: 0px 40px;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-.texte2 {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  display: flex;
-  padding: 10px;
-  align-items: center;
-  flex: 1 0 0;
-  border-radius: 8px;
-  border: 1px solid var(--form-border-red, #df6da2);
-  background: var(--form-background-yellow, #fffab9);
-  color: var(--form-placeholder-gray, #ad9783);
-  font-family: "Noto Sans JP";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.texte3 {
-  display: flex;
-  height: 150px;
-  padding: 10px;
-  align-items: flex-start;
-  flex: 1 0 0;
-  border-radius: 8px;
-  border: 1px solid var(--form-border-red, #df6da2);
-  background: var(--form-background-yellow, #fffab9);
-  color: var(--form-placeholder-gray, #ad9783);
-  font-family: "Noto Sans JP";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.Button {
-  position: relative;
-}
-.button {
-  display: flex;
-  width: 800px;
-  height: 60px;
-  padding: 10px 40px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  background: var(--accent-red, #f20574);
-
-  box-shadow: 4px 4px 0px 0px #f2e52e;
-  color: var(--white, #fffefc);
-  font-family: "Noto Sans JP";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.submit {
-  display: flex;
-  width: 800px;
-  height: 60px;
-  padding: 10px 40px;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--accent-red, #f20574);
-  box-shadow: 4px 4px 0px 0px #020911;
-  color: var(--white, #fffefc);
-  font-family: "Noto Sans JP";
-  font-size: 20px;
-  &:hover {
-    background-color: var(--color-button-hover-red);
-    box-shadow: 12px 12px 2px 0px #020911;
-    transition: all ease 0.5s;
-  }
-}
-.fillo1 {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  top: 10px;
-  right: 40px;
-}
-.footer {
-  display: flex;
-  padding: 60px 0px;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  align-self: stretch;
-  background: var(--background-black, #171525);
-}
-.footer-text {
-  color: var(--white, #fffefc);
-  font-family: "Noto Sans";
-  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
