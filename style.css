@@ -218,14 +218,10 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  left: 320px;
+  top: 168px;
   align-self: stretch;
   background: var(--color-background-navy);
-}
-@media (max-width: 750px) {
-  .course {
-    padding: 40px 20px;
-    gap: 40px;
-  }
 }
 
 .CourseTitle {
@@ -244,24 +240,27 @@ img {
   margin: 0;
   border: 0;
 }
+@media (max-width: 750px) {
+  .frame17 {
+    padding: 40px 20px;
+  }
+}
 
 .cards {
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  width: 800px;
 }
 @media (max-width: 750px) {
-  .card {
-    padding: 20px;
-    flex-direction: column;
-    align-items: flex-end;
+  .cards {
+    width: 100%;
+    height: 100%;
   }
 }
 
 .card {
-  position: relative;
   display: flex;
   height: 150px;
   flex: 1 0 0;
@@ -271,6 +270,14 @@ img {
   &:hover {
     box-shadow: 12px 12px 2px 0px #f20574;
     transition: all ease 0.5s;
+  }
+}
+@media (max-width: 750px) {
+  .card {
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
   }
 }
 
@@ -285,6 +292,7 @@ img {
   align-items: flex-end;
   gap: 10px;
   flex: 1 0 0;
+  font-size: 16px;
   margin: 0;
   border: 0;
   &:hover {
@@ -297,74 +305,120 @@ img {
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
   }
 }
 
 .text1 {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--accent-red, #f20574);
-  font-family: "Noto Sans JP";
+  background: var(--color-accent-yellow);
+  font-family: var(--font-family-body);
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   margin: 0;
+  &:hover {
+    background-color: var(--course-hover-yellow, #f4e877);
+  }
+}
+@media (max-width: 750px) {
+  .text1 {
+    align-self: stretch;
+    font-size: 12px;
+    text-align: right;
+  }
 }
 
 .item1 {
-  position: absolute;
-  left: 58.5px;
-  top: 51px;
-  text-align: center;
+  background-image: url("./img/live.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 60px;
   color: var(--white, #fffefc);
   font-family: var(--font-family-heading);
   font-size: 32px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: 1.6px;
+}
+@media (max-width: 750px) {
+  .item1 {
+    align-self: stretch;
+    padding: 94px 40px;
+    font-size: 24px;
+  }
+}
+.content {
+  display: flex;
+  align-items: flex-end;
+  background: var(--color-accent-yellow);
+  &:hover {
+    background-color: var(--course-hover-yellow, #f4e877);
+  }
+}
+.item2 {
+  background-image: url("./img/live.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 70px;
+  color: var(--white, #fffefc);
+  font-family: var(--font-family-heading);
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+}
+@media (max-width: 750px) {
+  .item2 {
+    align-self: stretch;
+    padding: 94px 40px;
+  }
 }
 
-.item2 {
-  position: absolute;
-  left: 69px;
-  top: 51px;
-  text-align: center;
-  color: var(--white, #fffefc);
-  font-family: var(--font-family-heading);
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.6px;
-}
 .item3 {
-  position: absolute;
-  left: 92.5px;
-  top: 51px;
-  text-align: center;
+  background-image: url("./img/live.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 94px;
   color: var(--white, #fffefc);
   font-family: var(--font-family-heading);
   font-size: 32px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: 1.6px;
 }
+@media (max-width: 750px) {
+  .item3 {
+    align-self: stretch;
+    padding: 94px 40px;
+  }
+}
+
 .item4 {
-  position: absolute;
-  left: 94px;
-  top: 51px;
-  text-align: center;
+  background-image: url("./img/live.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 96px;
   color: var(--white, #fffefc);
   font-family: var(--font-family-heading);
   font-size: 32px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   letter-spacing: 1.6px;
+}
+@media (max-width: 750px) {
+  .item4 {
+    align-self: stretch;
+    padding: 94px 40px;
+  }
 }
 .lives {
   width: 250px;
@@ -383,7 +437,6 @@ img {
 }
 .button {
   display: flex;
-  width: 800px;
   height: 60px;
   padding: 10px 40px;
   justify-content: center;
@@ -397,6 +450,13 @@ img {
     transition: all ease 0.5s;
   }
 }
+@media (max-width: 750px) {
+  .button {
+    height: 40px;
+    padding: 10px 20px;
+    align-self: stretch;
+  }
+}
 
 .Frame22 {
   display: flex;
@@ -404,6 +464,7 @@ img {
   align-items: flex-start;
   gap: 10px;
   flex: 1 0 0;
+  color: var(--white, #fffefc);
 }
 .fillo {
   width: 40px;
@@ -419,31 +480,22 @@ img {
   line-height: normal;
 }
 .signup {
-  display: flex;
-  padding: 80px 0px;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  align-self: stretch;
   background: var(--color-accent-yellow);
+  padding: 80px 0px;
+  gap: 30px;
 }
 
 .flame18 {
   display: flex;
-  width: 800px;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  padding: 0px 40px;
+  gap: 40px;
 }
 
 .SectionTitle {
-  flex: 1 0 0;
-  color: var(--black, #020911);
   font-family: Anton;
   font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   letter-spacing: 0.64px;
 }
 .text2 {
@@ -453,10 +505,15 @@ img {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  display: flex;
   align-items: flex-start;
   align-self: stretch;
 }
+@media (max-width: 750px) {
+  .text2 {
+    font-size: 16px;
+  }
+}
+
 .discription {
   display: flex;
   width: 800px;
@@ -464,10 +521,7 @@ img {
 }
 @media (max-width: 750px) {
   .discription {
-    color: #000;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
+    width: 100%;
   }
 }
 
@@ -478,21 +532,30 @@ img {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 750px) {
+  .Forms {
+    width: 100%;
+  }
+}
+
 .TextInput {
   align-items: flex-start;
   align-self: stretch;
   display: grid;
   grid-template-columns: 250px 1fr;
-  padding: 0px 40px;
   flex-direction: column;
   align-items: center;
   gap: 40px;
 }
+@media (max-width: 750px) {
+  .TextInput {
+    display: flex;
+    gap: 10px;
+  }
+}
 .texte2 {
-  display: flex;
   align-items: flex-start;
   gap: 10px;
-  display: flex;
   padding: 10px;
   align-items: center;
   flex: 1 0 0;
@@ -505,13 +568,17 @@ img {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 750px) {
+  .texte2 {
+    width: 100%;
+  }
 }
 .texte3 {
   display: flex;
   height: 150px;
   padding: 10px;
   align-items: flex-start;
-  flex: 1 0 0;
   border-radius: 8px;
   border: 1px solid var(--form-border-red, #df6da2);
   background: var(--form-background-yellow, #fffab9);
@@ -522,43 +589,42 @@ img {
   font-weight: 400;
   line-height: normal;
 }
+@media (max-width: 750px) {
+  .texte3 {
+    align-self: stretch;
+  }
+}
 .Button {
   position: relative;
-}
-.button {
-  display: flex;
   width: 800px;
   height: 60px;
-  padding: 10px 40px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  background: var(--accent-red, #f20574);
-
-  box-shadow: 4px 4px 0px 0px #f2e52e;
-  color: var(--white, #fffefc);
-  font-family: "Noto Sans JP";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.submit {
-  display: flex;
-  width: 800px;
-  height: 60px;
-  padding: 10px 40px;
-  justify-content: center;
-  align-items: center;
   background-color: var(--accent-red, #f20574);
   box-shadow: 4px 4px 0px 0px #020911;
   color: var(--white, #fffefc);
+  &:hover {
+    background-color: var(--color-button-hover-red);
+    box-shadow: 12px 12px 2px 0px #020911;
+    transition: all ease 0.5s;
+  }
+}
+
+.submit {
   font-family: "Noto Sans JP";
   font-size: 20px;
   &:hover {
     background-color: var(--color-button-hover-red);
     box-shadow: 12px 12px 2px 0px #020911;
     transition: all ease 0.5s;
+  }
+}
+@media (max-width: 750px) {
+  .submit {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    height: 40px;
+    padding: 10px 20px;
+    align-items: center;
   }
 }
 .fillo1 {
