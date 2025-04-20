@@ -242,7 +242,7 @@ img {
   border: 0;
 }
 @media (max-width: 750px) {
-  .frame17 {
+  .courses-container {
     padding: 40px 20px;
   }
 }
@@ -434,7 +434,7 @@ img {
   height: 40px;
   flex-shrink: 0;
 }
-.text {
+.big-button-label {
   color: var(--white, #fffefc);
   font-family: "Noto Sans JP";
   font-size: 20px;
@@ -543,11 +543,12 @@ img {
     width: 100%;
   }
 }
-.texte3 {
-  display: flex;
+.signup-input-enthusiasm {
   height: 150px;
-  padding: 10px;
   align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
   border-radius: 8px;
   border: 1px solid var(--form-border-red, #df6da2);
   background: var(--form-background-yellow, #fffab9);
@@ -559,8 +560,8 @@ img {
   line-height: normal;
 }
 @media (max-width: 750px) {
-  .texte3 {
-    align-self: stretch;
+  .signup-input-enthusiasm {
+    width: 100%;
   }
 }
 .signup-button {
@@ -601,7 +602,7 @@ img {
   font-size: 20px;
 }
 @media (max-width: 750px) {
-  .submit {
+  .big-button-label {
     font-size: 14px;
   }
 }
