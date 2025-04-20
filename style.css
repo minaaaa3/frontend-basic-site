@@ -212,7 +212,7 @@ img {
   align-items: center;
   gap: 40px;
 }
-.course {
+.courses {
   display: flex;
   padding: 80px 0px;
   flex-direction: column;
@@ -224,18 +224,19 @@ img {
   background: var(--color-background-navy);
 }
 
-.CourseTitle {
+.coursetitle {
+  display: flex;
+  justify-content: center;
   color: var(--color-white);
   font-family: var(--font-family-heading);
   font-size: 32px;
   margin: 0px;
 }
 
-.frame17 {
+.courses-container {
   display: flex;
   padding: 0px 40px;
   flex-direction: column;
-  align-items: center;
   gap: 40px;
   margin: 0;
   border: 0;
@@ -246,7 +247,7 @@ img {
   }
 }
 
-.cards {
+.course-cards {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -254,26 +255,26 @@ img {
   width: 800px;
 }
 @media (max-width: 750px) {
-  .cards {
+  .course-cards {
     width: 100%;
     height: 100%;
   }
 }
 
-.card {
+.course-card {
+  align-items: flex-start;
   display: flex;
-  height: 150px;
-  flex: 1 0 0;
   align-self: stretch;
   padding-top: 0%;
   box-shadow: 4px 4px 0px 0px #f20574;
+  background: var(--accent-yellow, #f2e52e);
   &:hover {
     box-shadow: 12px 12px 2px 0px #f20574;
     transition: all ease 0.5s;
   }
 }
 @media (max-width: 750px) {
-  .card {
+  .course-card {
     height: 100%;
     flex-direction: column;
     align-items: flex-end;
@@ -281,26 +282,13 @@ img {
   }
 }
 
-.cardbody {
-  display: flex;
-  height: 150px;
-  align-items: flex-start;
-  align-self: stretch;
-  background: var(--color-accent-yellow);
-  padding: 20px;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-  flex: 1 0 0;
-  font-size: 16px;
+.course-block-description {
   margin: 0;
   border: 0;
-  &:hover {
-    background-color: var(--course-hover-yellow, #f4e877);
-  }
 }
+
 @media (max-width: 750px) {
-  .cardbody {
+  .course-block-description {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -308,15 +296,15 @@ img {
     font-size: 12px;
     width: 100%;
     height: 100%;
+    padding: 0px;
   }
 }
 
-.text1 {
+.course-block-more {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--accent-red, #f20574);
-  background: var(--color-accent-yellow);
   font-family: var(--font-family-body);
   font-size: 16px;
   font-weight: 400;
@@ -326,100 +314,67 @@ img {
   }
 }
 @media (max-width: 750px) {
-  .text1 {
-    align-self: stretch;
+  .course-block-more {
     font-size: 12px;
     text-align: right;
   }
 }
 
-.item1 {
+.course-thumbnail {
+  justify-content: center;
+  width: 250px;
+  position: relative;
+  display: flex;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
   background-image: url("./img/live.png");
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 60px 60px;
   color: var(--white, #fffefc);
   font-family: var(--font-family-heading);
   font-size: 32px;
-  font-weight: 400;
   letter-spacing: 1.6px;
 }
+.course-thumbnail::after {
+  position: absolute;
+  background-color: var(--course-overlay, rgba(32, 8, 19, 0.63));
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
 @media (max-width: 750px) {
-  .item1 {
+  .course-thumbnail {
+    width: 100%;
     align-self: stretch;
     padding: 94px 40px;
     font-size: 24px;
+    justify-content: center;
   }
 }
-.content {
+.course-thumbnail-name {
+  z-index: 5;
+}
+.course-block-body {
   display: flex;
+  align-self: stretch;
+  padding: 20px;
+  flex-direction: column;
   align-items: flex-end;
-  background: var(--color-accent-yellow);
+  gap: 10px;
+  flex: 1 0 0;
+  font-size: 16px;
   &:hover {
     background-color: var(--course-hover-yellow, #f4e877);
   }
 }
-.item2 {
-  background-image: url("./img/live.png");
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 70px;
-  color: var(--white, #fffefc);
-  font-family: var(--font-family-heading);
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: 1.6px;
-}
 @media (max-width: 750px) {
-  .item2 {
-    align-self: stretch;
-    padding: 94px 40px;
+  .course-block-body {
+    padding: 20px;
   }
 }
 
-.item3 {
-  background-image: url("./img/live.png");
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 94px;
-  color: var(--white, #fffefc);
-  font-family: var(--font-family-heading);
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: 1.6px;
-}
-@media (max-width: 750px) {
-  .item3 {
-    align-self: stretch;
-    padding: 94px 40px;
-  }
-}
-
-.item4 {
-  background-image: url("./img/live.png");
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 96px;
-  color: var(--white, #fffefc);
-  font-family: var(--font-family-heading);
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: 1.6px;
-}
-@media (max-width: 750px) {
-  .item4 {
-    align-self: stretch;
-    padding: 94px 40px;
-  }
-}
 .lives {
   width: 250px;
   height: 150px;
@@ -435,7 +390,7 @@ img {
     align-self: stretch;
   }
 }
-.button {
+.big-button {
   display: flex;
   height: 60px;
   padding: 10px 40px;
@@ -451,22 +406,30 @@ img {
   }
 }
 @media (max-width: 750px) {
-  .button {
+  .big-button {
     height: 40px;
     padding: 10px 20px;
     align-self: stretch;
   }
 }
 
-.Frame22 {
+.big-button-label {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
   flex: 1 0 0;
   color: var(--white, #fffefc);
+  font-family: "Noto Sans JP";
+  font-size: 20px;
 }
-.fillo {
+@media (max-width: 750px) {
+  .big-button-label {
+    font-size: 14px;
+  }
+}
+
+.big-button-icon {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
@@ -484,8 +447,14 @@ img {
   padding: 80px 0px;
   gap: 30px;
 }
+@media (max-width: 750px) {
+  .signup {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+}
 
-.flame18 {
+.signup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -493,12 +462,12 @@ img {
   gap: 40px;
 }
 
-.SectionTitle {
+.signup-head {
   font-family: Anton;
   font-size: 32px;
   letter-spacing: 0.64px;
 }
-.text2 {
+.signup-label {
   color: var(--black, #020911);
   font-family: "Noto Sans JP";
   font-size: 20px;
@@ -509,23 +478,23 @@ img {
   align-self: stretch;
 }
 @media (max-width: 750px) {
-  .text2 {
+  .signup-label {
     font-size: 16px;
   }
 }
 
-.discription {
+.signup-description {
   display: flex;
   width: 800px;
   align-items: flex-start;
 }
 @media (max-width: 750px) {
-  .discription {
+  .signup-description {
     width: 100%;
   }
 }
 
-.Forms {
+.signup-form {
   display: flex;
   width: 800px;
   flex-direction: column;
@@ -533,12 +502,12 @@ img {
   gap: 20px;
 }
 @media (max-width: 750px) {
-  .Forms {
+  .signup-form {
     width: 100%;
   }
 }
 
-.TextInput {
+.signup-input-container {
   align-items: flex-start;
   align-self: stretch;
   display: grid;
@@ -548,12 +517,12 @@ img {
   gap: 40px;
 }
 @media (max-width: 750px) {
-  .TextInput {
+  .signup-input-container {
     display: flex;
     gap: 10px;
   }
 }
-.texte2 {
+.signup-input {
   align-items: flex-start;
   gap: 10px;
   padding: 10px;
@@ -570,7 +539,7 @@ img {
   line-height: normal;
 }
 @media (max-width: 750px) {
-  .texte2 {
+  .signup-input {
     width: 100%;
   }
 }
@@ -594,23 +563,18 @@ img {
     align-self: stretch;
   }
 }
-.Button {
-  position: relative;
-  width: 800px;
+.signup-button {
+  display: flex;
   height: 60px;
+  padding: 10px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 800px;
+  display: flex;
   background-color: var(--accent-red, #f20574);
-  box-shadow: 4px 4px 0px 0px #020911;
-  color: var(--white, #fffefc);
-  &:hover {
-    background-color: var(--color-button-hover-red);
-    box-shadow: 12px 12px 2px 0px #020911;
-    transition: all ease 0.5s;
-  }
-}
-
-.submit {
-  font-family: "Noto Sans JP";
-  font-size: 20px;
+  box-shadow: 4px 4px 0px 0px;
+  position: relative;
   &:hover {
     background-color: var(--color-button-hover-red);
     box-shadow: 12px 12px 2px 0px #020911;
@@ -618,17 +582,31 @@ img {
   }
 }
 @media (max-width: 750px) {
-  .submit {
-    width: 100%;
-    height: 100%;
-    display: flex;
+  .signup-button {
     height: 40px;
     padding: 10px 20px;
-    align-items: center;
+    align-self: stretch;
+    width: 100%;
   }
 }
-.fillo1 {
-  position: absolute;
+
+.big-button-label {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  color: var(--white, #fffefc);
+  font-family: "Noto Sans JP";
+  font-size: 20px;
+}
+@media (max-width: 750px) {
+  .submit {
+    font-size: 14px;
+  }
+}
+
+.big-button-icon {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
