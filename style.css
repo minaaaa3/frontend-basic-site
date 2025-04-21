@@ -148,10 +148,27 @@ img {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 750px) {
+  .img-wrap-writings {
+    width: 100%;
+    color: var(--white, #fffefc);
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
 .live {
   width: 320px;
   height: 180px;
   flex-shrink: 0;
+}
+@media (max-width: 750px) {
+  .live {
+    display: none;
+  }
 }
 .explaination {
   color: var(--white, #fffefc);
@@ -171,6 +188,12 @@ img {
   align-self: stretch;
   background-color: var(--color-background-black);
 }
+@media (max-width: 750px) {
+  .about {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+}
 .frame16 {
   display: flex;
   padding: 0px 40px;
@@ -178,6 +201,7 @@ img {
   align-items: center;
   gap: 40px;
 }
+
 .courses {
   display: flex;
   padding: 80px 0px;
@@ -367,6 +391,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  border: none;
   background: var(--accent-red, #f20574);
   box-shadow: 4px 4px 0px 0px #f2e52e;
   &:hover {
@@ -541,6 +566,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  border: none;
   width: 800px;
   display: flex;
   background-color: var(--accent-red, #f20574);
