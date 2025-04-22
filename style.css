@@ -148,10 +148,27 @@ img {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 750px) {
+  .img-wrap-writings {
+    width: 100%;
+    color: var(--white, #fffefc);
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
 .live {
   width: 320px;
   height: 180px;
   flex-shrink: 0;
+}
+@media (max-width: 750px) {
+  .live {
+    display: none;
+  }
 }
 .explaination {
   color: var(--white, #fffefc);
@@ -171,6 +188,12 @@ img {
   align-self: stretch;
   background-color: var(--color-background-black);
 }
+@media (max-width: 750px) {
+  .about {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+}
 .frame16 {
   display: flex;
   padding: 0px 40px;
@@ -178,18 +201,24 @@ img {
   align-items: center;
   gap: 40px;
 }
-.course {
+
+.courses {
   display: flex;
   padding: 80px 0px;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  left: 320px;
+  top: 168px;
   align-self: stretch;
   background: var(--color-background-navy);
 }
-.SectionTitle {
-  color: var(--white, #fffefc);
-  font-family: Anton;
+
+.coursetitle {
+  display: flex;
+  justify-content: center;
+  color: var(--color-white);
+  font-family: var(--font-family-heading);
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -197,132 +226,172 @@ img {
   letter-spacing: 0.64px;
   margin: 0px;
 }
-.frame17 {
+
+.courses-container {
   display: flex;
   padding: 0px 40px;
   flex-direction: column;
-  align-items: center;
   gap: 40px;
   margin: 0;
   border: 0;
 }
-.cards {
+@media (max-width: 750px) {
+  .courses-container {
+    padding: 40px 20px;
+  }
+}
+
+.course-cards {
   display: flex;
-  width: 800px;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  width: 800px;
 }
-.card {
-  position: relative;
+@media (max-width: 750px) {
+  .course-cards {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.course-card {
+  align-items: flex-start;
   display: flex;
-  height: 150px;
-  flex: 1 0 0;
   align-self: stretch;
   padding-top: 0%;
   box-shadow: 4px 4px 0px 0px #f20574;
+  background: var(--accent-yellow, #f2e52e);
   &:hover {
     box-shadow: 12px 12px 2px 0px #f20574;
     transition: all ease 0.5s;
   }
 }
-.cardbody {
-  display: flex;
-  height: 150px;
-  align-items: flex-start;
-  align-self: stretch;
-  background: var(--color-accent-yellow);
+@media (max-width: 750px) {
+  .course-card {
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+}
 
+.course-block-description {
+  margin: 0;
+  border: 0;
+}
+
+@media (max-width: 750px) {
+  .course-block-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+  }
+}
+
+.course-block-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent-red, #f20574);
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  &:hover {
+    background-color: var(--course-hover-yellow, #f4e877);
+  }
+}
+@media (max-width: 750px) {
+  .course-block-more {
+    font-size: 12px;
+    text-align: right;
+  }
+}
+
+.course-thumbnail {
+  justify-content: center;
+  width: 250px;
+  position: relative;
+  display: flex;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  background-image: url("./img/live.png");
+  background-size: cover;
+  padding: 60px 60px;
+  color: var(--white, #fffefc);
+  font-family: var(--font-family-heading);
+  font-size: 32px;
+  letter-spacing: 1.6px;
+}
+.course-thumbnail::after {
+  position: absolute;
+  background-color: var(--course-overlay, rgba(32, 8, 19, 0.63));
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+@media (max-width: 750px) {
+  .course-thumbnail {
+    width: 100%;
+    align-self: stretch;
+    padding: 94px 40px;
+    font-size: 24px;
+    justify-content: center;
+  }
+}
+.course-thumbnail-name {
+  z-index: 5;
+}
+.course-block-body {
+  display: flex;
+  align-self: stretch;
   padding: 20px;
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
   flex: 1 0 0;
-  margin: 0;
-  border: 0;
+  font-size: 16px;
   &:hover {
     background-color: var(--course-hover-yellow, #f4e877);
   }
 }
-.text1 {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  color: var(--accent-red, #f20574);
-  font-family: "Noto Sans JP";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin: 0;
+@media (max-width: 750px) {
+  .course-block-body {
+    padding: 20px;
+  }
 }
 
-.item1 {
-  position: absolute;
-  left: 58.5px;
-  top: 51px;
-  text-align: center;
-  color: var(--white, #fffefc);
-  font-family: var(--font-family-heading);
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.6px;
-}
-.item2 {
-  position: absolute;
-  left: 69px;
-  top: 51px;
-  text-align: center;
-  color: var(--white, #fffefc);
-  font-family: var(--font-family-heading);
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.6px;
-}
-.item3 {
-  position: absolute;
-  left: 92.5px;
-  top: 51px;
-  text-align: center;
-  color: var(--white, #fffefc);
-  font-family: var(--font-family-heading);
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.6px;
-}
-.item4 {
-  position: absolute;
-  left: 94px;
-  top: 51px;
-  text-align: center;
-  color: var(--white, #fffefc);
-  font-family: var(--font-family-heading);
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.6px;
-}
 .lives {
   width: 250px;
   height: 150px;
   flex-shrink: 0;
   gap: 10px;
 }
-.button {
+@media (max-width: 750px) {
+  .lives {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+}
+.big-button {
   display: flex;
-  width: 800px;
   height: 60px;
   padding: 10px 40px;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  border: none;
   background: var(--accent-red, #f20574);
   box-shadow: 4px 4px 0px 0px #f2e52e;
   &:hover {
@@ -331,22 +400,229 @@ img {
     transition: all ease 0.5s;
   }
 }
-.Frame22 {
+@media (max-width: 750px) {
+  .big-button {
+    height: 40px;
+    padding: 10px 20px;
+    align-self: stretch;
+  }
+}
+
+.big-button-label {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
   flex: 1 0 0;
+  color: var(--white, #fffefc);
+  font-family: "Noto Sans JP";
+  font-size: 20px;
 }
-.fillo {
+@media (max-width: 750px) {
+  .big-button-label {
+    font-size: 14px;
+  }
+}
+
+.big-button-icon {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
 }
-.text {
+.big-button-label {
   color: var(--white, #fffefc);
   font-family: "Noto Sans JP";
   font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.signup {
+  background: var(--color-accent-yellow);
+  padding: 80px 0px;
+  gap: 30px;
+}
+@media (max-width: 750px) {
+  .signup {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 40px;
+  gap: 40px;
+}
+
+.signup-head {
+  font-family: Anton;
+  font-size: 32px;
+  letter-spacing: 0.64px;
+}
+.signup-label {
+  color: var(--black, #020911);
+  font-family: "Noto Sans JP";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-items: flex-start;
+  align-self: stretch;
+}
+@media (max-width: 750px) {
+  .signup-label {
+    font-size: 16px;
+  }
+}
+
+.signup-description {
+  display: flex;
+  width: 800px;
+  align-items: flex-start;
+}
+@media (max-width: 750px) {
+  .signup-description {
+    width: 100%;
+  }
+}
+
+.signup-form {
+  display: flex;
+  width: 800px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 750px) {
+  .signup-form {
+    width: 100%;
+  }
+}
+
+.signup-input-container {
+  align-items: flex-start;
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 750px) {
+  .signup-input-container {
+    display: flex;
+    gap: 10px;
+  }
+}
+.signup-input {
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid var(--form-border-red, #df6da2);
+  background: var(--form-background-yellow, #fffab9);
+  color: var(--form-placeholder-gray, #ad9783);
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 750px) {
+  .signup-input {
+    width: 100%;
+  }
+}
+.signup-input-enthusiasm {
+  height: 150px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--form-border-red, #df6da2);
+  background: var(--form-background-yellow, #fffab9);
+  color: var(--form-placeholder-gray, #ad9783);
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 750px) {
+  .signup-input-enthusiasm {
+    width: 100%;
+  }
+}
+.signup-button {
+  display: flex;
+  height: 60px;
+  padding: 10px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  width: 800px;
+  display: flex;
+  background-color: var(--accent-red, #f20574);
+  box-shadow: 4px 4px 0px 0px;
+  position: relative;
+  &:hover {
+    background-color: var(--color-button-hover-red);
+    box-shadow: 12px 12px 2px 0px #020911;
+    transition: all ease 0.5s;
+  }
+}
+@media (max-width: 750px) {
+  .signup-button {
+    height: 40px;
+    padding: 10px 20px;
+    align-self: stretch;
+    width: 100%;
+  }
+}
+
+.big-button-label {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  color: var(--white, #fffefc);
+  font-family: "Noto Sans JP";
+  font-size: 20px;
+}
+@media (max-width: 750px) {
+  .big-button-label {
+    font-size: 14px;
+  }
+}
+
+.big-button-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  top: 10px;
+  right: 40px;
+}
+.footer {
+  display: flex;
+  padding: 60px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+  background: var(--background-black, #171525);
+}
+.footer-text {
+  color: var(--white, #fffefc);
+  font-family: "Noto Sans";
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
